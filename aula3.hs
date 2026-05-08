@@ -38,7 +38,7 @@ nadaVendido n
 --Em qual semana não houve vendas? (se é que houve alguma)
 semanaSemVenda :: Int->Int
 semanaSemVenda n
-  |n < 0 = 0
+  |n < 0 = -1
   |venda n == 0 = n  
   |otherwise = semanaSemVenda(n-1)
 
