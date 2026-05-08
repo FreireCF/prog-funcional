@@ -1,5 +1,3 @@
-import Distribution.Compat.Lens (_1)
-{- HLINT ignore "Use foldr" -}
 abono::Int->Int 
 abono n
   |n <= 10 = 100
@@ -20,8 +18,6 @@ isEven::Int->Bool
 isEven n
   |n `mod` 2 == 0 = True
   |otherwise = False
-
-
 
 --recebe duas listas e retorna uma terceiro concatenada
 concatena lista1 lista2 = lista2+lista2
@@ -62,7 +58,3 @@ remove_n_primeiros n (x:xs) = remove_n_primeiros (n-1) xs
 remove_ultimo::[a]->[a]
 remove_ultimo (x:[]) = []
 remove_ultimo (x:xs) = x : remove_ultimo xs
-
---função que remove os n últimos elementos de uma lista
-
---função que remove o n-ésimo elemento de uma lista

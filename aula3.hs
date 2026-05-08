@@ -1,38 +1,49 @@
 venda::Int->Int 
-venda 0 = 5
+venda 0 = 1
 venda 1 = 6
-venda 2 = 0   
-venda 3 = 8
+venda 2 = 2   
+venda 3 = 18
 venda 4 = 2
 venda 5 = 17
+venda _ = 0
 
+{-Qual o total de vendas desde a semana 0 até a
+semana n?-}
 maiorVenda::Int->Int
 maiorVenda n
   |n == 0 = venda 0
   |otherwise = max (maiorVenda (n-1)) (venda n)
 
+--Qual a maior venda semanal entre as semanas 0 e n
 totalVenda::Int->Int
 totalVenda n
   |n ==  0 = venda 0
   |n > 0 = venda n + totalVenda(n-1)
   |otherwise = 0
 
+--Em que semana ocorreu a maior venda?
 semanaMaisVenda::Int->Int
 semanaMaisVenda n
-  |n == 0 = n
-  |venda n > maiorVenda (n-1) = maiorVenda(n-1)
-  |otherwise = venda n
+  |n == 0 = 0
+  |venda n >= venda (semanaMaisVenda (n-1)) = n
+  |otherwise = semanaMaisVenda (n-1)
 
+--Existe alguma semana na qual nada foi vendido?
 nadaVendido :: Int -> Bool
 nadaVendido n
   |venda n > 0 = False
   |otherwise = True
 
+--Em qual semana não houve vendas? (se é que houve alguma)
 semanaSemVenda :: Int->Int
 semanaSemVenda n
   |n < 0 = 0
   |venda n == 0 = n  
   |otherwise = semanaSemVenda(n-1)
+
+{-Defina uma função nAnd::Bool->Bool->Bool que gera
+como resultado True, exceto quando ambos os
+argumentos são True-}
 
 nAnd::Bool -> Bool -> Bool  
 nAnd True True = False 
