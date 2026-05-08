@@ -1,10 +1,10 @@
 venda::Int->Int 
 venda 0 = 1
-venda 1 = 6
+venda 1 = 2
 venda 2 = 2   
-venda 3 = 18
-venda 4 = 2
-venda 5 = 17
+venda 3 = 10
+venda 4 = 0
+venda 5 = 18
 venda _ = 0
 
 {-Qual o total de vendas desde a semana 0 até a
@@ -31,8 +31,9 @@ semanaMaisVenda n
 --Existe alguma semana na qual nada foi vendido?
 nadaVendido :: Int -> Bool
 nadaVendido n
-  |venda n > 0 = False
-  |otherwise = True
+  |n < 0 = False 
+  |venda n == 0 = True
+  |otherwise = nadaVendido (n-1)
 
 --Em qual semana não houve vendas? (se é que houve alguma)
 semanaSemVenda :: Int->Int
