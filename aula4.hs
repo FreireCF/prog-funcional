@@ -1,4 +1,4 @@
-main::IO()
+main :: IO()
 main = do
   putStrLn "Digite um número "
   s1 <- getLine
