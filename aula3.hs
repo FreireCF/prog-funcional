@@ -33,7 +33,7 @@ nadaVendido :: Int -> Bool
 nadaVendido n
   |n < 0 = False 
   |venda n == 0 = True
-  |otherwise = nadaVendido (n-1)
+  |otherwise = nadaVendido (n-1)  
 
 --Em qual semana não houve vendas? (se é que houve alguma)
 semanaSemVenda :: Int->Int
