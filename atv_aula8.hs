@@ -28,7 +28,7 @@ valida (h, m, s)
 
 cont_seg :: Hora -> Int --função2
 cont_seg (h, m, s)
-  |valida (h, m, s) = h*3600
+  |valida (h, m, s) = h*3600 + m*60 + s
   |otherwise = 0 
 
 converteToH :: Int -> Hora --função 3
