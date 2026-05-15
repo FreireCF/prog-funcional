@@ -1,6 +1,4 @@
 import Prelude
-import Control.Monad.RWS (MonadState(put))
-import System.Posix.Internals (puts)
 
 type Hora = (Int, Int, Int) --horas, minutos, segundos 
 
