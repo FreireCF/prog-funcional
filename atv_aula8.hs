@@ -32,11 +32,14 @@ cont_seg (h, m, s)
   |otherwise = 0 
 
 converteToH :: Int -> Hora --função 3
-converteToH s1 = (h, m, s)
+converteToH s1 
+  |s1 < 60 = (0, 0, s1)
+  |s1 < 3600 = (0, s1 `div` 60, s1`mod`60)
+  |otherwise = (h, m, s)
   where 
     h = s1 `div` 3600 
-    m = (s1 `mod` 3600) `div` 60
-    s = (s1 `mod` 3600) `mod` 60
+    m = s1 `mod` 60
+    s = m `mod` 60
   
 diferenca :: Hora -> Hora -> Hora
 diferenca (a, b, c) (x, y, z)
