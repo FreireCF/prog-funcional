@@ -1,5 +1,4 @@
 import Prelude
-import Control.Monad.RWS.CPS (MonadState(put))
 
 type Data = (Int, Int, Int)
 
