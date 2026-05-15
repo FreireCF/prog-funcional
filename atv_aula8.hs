@@ -43,10 +43,10 @@ diferenca (a, b, c) (x, y, z)
   |valida (a, b, c) && valida(x, y, z) = converteToH total 
   |otherwise = (0,0,0) 
     where
-      h1 = (a*3600) - (x*3600)
-      m1 = (b*60) - (y*60 )
-      s1 = c - z
-      total = abs (h1 + m1 + s1 )
+      h1 = abs ((a*3600) - (x*3600))
+      m1 = abs ((b*60) - (y*60))
+      s1 = abs (c - z)
+      total = h1 + m1 + s1 
 
 chama_func::Int -> IO()
 chama_func 1 = do
