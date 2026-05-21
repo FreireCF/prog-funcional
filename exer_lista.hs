@@ -1,4 +1,3 @@
-import Control.Monad.Cont (cont)
 -- Questões do exer_lista.md
 
 --q1
@@ -107,3 +106,26 @@ maiorQueZero [] = 0
 maiorQueZero (x:xs)
   |x >= 0 = 1 + maiorQueZero xs 
   |otherwise = maiorQueZero xs
+
+--q17
+multiplicaPor:: [Int] -> Int ->[Int]
+multiplicaPor [] _ = []
+multiplicaPor (x:xs) n = x*n : multiplicaPor xs n
+
+--q18
+ultimo :: [a] -> a
+--ultimo [] = 
+ultimo [x] = x
+ultimo (x:xs) = ultimo xs
+
+--q19
+penultimo:: [a] -> a
+penultimo (x:xs)
+  |length xs == 1 = x
+  |otherwise = penultimo xs
+  
+--q20 
+duplica::[a] -> [a] 
+duplica [] = []
+duplica (x:xs) = 
+  x:x:duplica xs
