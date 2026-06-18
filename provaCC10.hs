@@ -7,9 +7,7 @@ contaFreq (x:xs) p
 
 removePalavra :: [String] -> String -> [String]
 removePalavra [] _ = []
-removePalavra (x:xs) p 
-  |x == p = removePalavra xs p
-  |otherwise = x : removePalavra xs p
+removePalavra list p = [x| x<-list, x/=p] 
 
 tuplaFreq :: [String] -> [(String, Int)]
 tuplaFreq [] = []
