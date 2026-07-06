@@ -15,7 +15,7 @@ aux (c,i) = c : aux (c, i-1)
 receba uma lista de tuplas e retorne quantos
 pares são compostos por números amigáveis
 contaAmigaveis [(1184,1210), (121,333), (220,284), (220,220), (6,36)] = 2
-    
+
 AMIGAVEIS ==> sum divisores x == y && sum divisores y == x
 -}
 contaAmigaveis :: [(Int, Int)] -> Int
