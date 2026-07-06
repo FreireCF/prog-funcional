@@ -20,6 +20,7 @@ sort ((a, b) : xs) = sort [(x,y)| (x,y)<-xs, y>b] ++ [a] ++ sort [(x,y)| (x,y)<-
 questao :: [String] -> [String]
 questao l1 = sort (tuplaFreq l1)
 
+
 --q2 
 hamming :: String -> String -> Int
 hamming [] p = length p
