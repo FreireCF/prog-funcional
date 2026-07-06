@@ -11,7 +11,7 @@ removePalavra list p = [x| x<-list, x/=p]
 
 tuplaFreq :: [String] -> [(String, Int)]
 tuplaFreq [] = []
-tuplaFreq (x:xs) = [((x), contaFreq (x:xs) (x))] ++ tuplaFreq (removePalavra xs x)
+tuplaFreq (x:xs) = [(x, contaFreq (x:xs) x)] ++ tuplaFreq (removePalavra xs x)
 
 sort :: [(String, Int)] -> [String]
 sort [] = []

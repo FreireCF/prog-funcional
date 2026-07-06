@@ -38,8 +38,8 @@ converteToH s1
   |otherwise = (h, m, s)
   where 
     h = s1 `div` 3600 
-    m = s1 `mod` 60
-    s = m `mod` 60
+    m = (s1`mod`3600) `div` 60
+    s = (s1 `mod` 3600) `mod` 60
   
 diferenca :: Hora -> Hora -> Hora
 diferenca (a, b, c) (x, y, z)
@@ -49,7 +49,7 @@ diferenca (a, b, c) (x, y, z)
       h1 = abs ((a*3600) - (x*3600))
       m1 = abs ((b*60) - (y*60))
       s1 = abs (c - z)
-      total = h1 + m1 + s1 
+      total = h1 + m1 + s1
 
 chama_func::Int -> IO()
 chama_func 1 = do
