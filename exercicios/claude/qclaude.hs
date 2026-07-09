@@ -86,7 +86,7 @@ indexaLista list = zip [i| i<-[0..length list]] [c| c<-list]
 filtraPorIndice :: (Num t, Enum t) => (t->Bool) -> [u] -> [u]
 filtraPorIndice f l = [x| (x, i)<-zip l [0..], f i]
 
-  {-10. Escreva uma função polimórfica chamada agrupaAdjacentesIguais que receba como parâmetro
+{-10. Escreva uma função polimórfica chamada agrupaAdjacentesIguais que receba como parâmetro
   uma lista de um tipo qualquer. A função deve agrupar elementos consecutivos iguais em
   sublistas.
   Exemplo:
