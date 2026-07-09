@@ -42,10 +42,10 @@ Defina funções que tomem uma lista de inteiros L e
 -}
 
 --retorna a lista dos quadrados
-quad :: Int -> Int
+quad :: a -> a
 quad n = 2*n
 
-list_quad :: [Int] -> [Int]
+list_quad :: [a] -> [a]
 list_quad l1 = map quad l1
 
 --retorna a soma dos quadrados dos elementos

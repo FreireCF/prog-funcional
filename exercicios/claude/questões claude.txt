@@ -1,0 +1,196 @@
+Lista de Questões - Polimorfismo (Claude)
+
+1. Escreva uma função polimórfica chamada mapeiaCondicional que receba como parâmetro uma
+função de retorno booleano e duas outras funções, além de uma lista de um tipo qualquer. Para
+cada elemento da lista, se a primeira função retornar True o elemento deve ser transformado pela
+segunda função, caso contrário deve ser transformado pela terceira função.
+Exemplo:
+mapeiaCondicional even (*2) (+1) [1,2,3,4] = [2,4,4,8]
+
+2. Escreva uma função polimórfica chamada combinaAteMenor que receba como parâmetro uma
+função binária e duas listas de tipos quaisquer. A função deve combinar as listas elemento a
+elemento até que a menor delas se esgote.
+Exemplo:
+combinaAteMenor (+) [1,2,3] [10,20] = [11,22]
+
+3. Escreva uma função polimórfica chamada contaSatisfazendoAninhada que receba como
+parâmetro uma função de retorno booleano e uma lista de listas de um tipo qualquer. A função deve
+retornar a quantidade total de elementos, dentre todas as sublistas, que satisfazem a condição.
+Exemplo:
+contaSatisfazendoAninhada even [[1,2,3],[4,5],[6]] = 3
+
+4. Escreva uma função polimórfica chamada particiona que receba como parâmetro uma função de
+retorno booleano e uma lista de um tipo qualquer. A função deve retornar uma tupla contendo, na
+primeira posição, os elementos que satisfazem a condição e, na segunda posição, os elementos
+que não satisfazem, mantendo a ordem original.
+Exemplo:
+particiona even [1,2,3,4,5,6] = ([2,4,6],[1,3,5])
+
+5. Escreva uma função polimórfica chamada removeAdjacentesIguais que receba como parâmetro
+uma lista de um tipo qualquer. A função deve remover elementos duplicados que estejam lado a
+lado, mantendo apenas a primeira ocorrência de cada sequência.
+Exemplo:
+removeAdjacentesIguais "aabbbcca" = "abca"
+
+6. Escreva uma função polimórfica chamada iteraAte que receba como parâmetro uma função, uma
+função de retorno booleano e um valor inicial de um tipo qualquer. A função deve aplicar
+repetidamente a primeira função ao valor, acumulando cada resultado em uma lista, até que o
+resultado satisfaça a condição (o elemento que satisfaz a condição deve ser incluído na lista).
+Exemplo:
+iteraAte (*2) (>20) 1 = [1,2,4,8,16,32]
+
+7. Escreva uma função polimórfica chamada indexaLista que receba como parâmetro uma lista de um
+tipo qualquer. A função deve retornar uma lista de tuplas associando cada elemento ao seu índice,
+começando em 0.
+Exemplo:
+indexaLista "abc" = [(0,'a'),(1,'b'),(2,'c')]
+
+8. Escreva uma função polimórfica chamada filtraPorIndice que receba como parâmetro uma função
+de retorno booleano (que opera sobre índices) e uma lista de um tipo qualquer. A função deve
+retornar apenas os elementos cujas posições satisfazem a condição.
+Exemplo:
+filtraPorIndice even [10,20,30,40,50] = [10,30,50]
+
+9. Escreva uma função polimórfica chamada maiorSequenciaSatisfazendo que receba como
+parâmetro uma função de retorno booleano e uma lista de um tipo qualquer. A função deve retornar
+a maior sublista contígua cujos elementos satisfazem a condição. Em caso de empate, deve ser
+retornada a primeira sublista encontrada.
+Exemplo:
+maiorSequenciaSatisfazendo even [1,2,4,6,3,8,10,12,5] = [8,10,12]
+
+10. Escreva uma função polimórfica chamada agrupaAdjacentesIguais que receba como parâmetro
+uma lista de um tipo qualquer. A função deve agrupar elementos consecutivos iguais em
+sublistas.
+Exemplo:
+agrupaAdjacentesIguais "aabbbc" = ["aa","bbb","c"]
+
+11. Escreva uma função polimórfica chamada transformaPosicoesPares que receba como parâmetro
+uma função e uma lista de um tipo qualquer. A função deve aplicar a transformação apenas aos
+elementos localizados em posições pares (0, 2, 4, ...), mantendo os demais inalterados.
+Exemplo:
+transformaPosicoesPares (*10) [1,2,3,4,5] = [10,2,30,4,50]
+
+12. Escreva uma função polimórfica chamada acumulaAplicando que receba como parâmetro uma
+função binária, um valor inicial e uma lista de tipos quaisquer. A função deve retornar a lista de
+todos os resultados acumulados a cada aplicação, incluindo o valor inicial.
+Exemplo:
+acumulaAplicando (+) 0 [1,2,3,4] = [0,1,3,6,10]
+
+13. Escreva uma função polimórfica chamada contaTransicoes que receba como parâmetro uma
+função de retorno booleano e uma lista de um tipo qualquer. A função deve contar quantas vezes
+o resultado da condição muda de um elemento para o próximo na lista.
+Exemplo:
+contaTransicoes even [1,2,2,4,5,7,8] = 3
+
+14. Escreva uma função polimórfica chamada mesclaOrdenada que receba como parâmetro duas
+listas já ordenadas de um tipo qualquer. A função deve mesclá-las em uma única lista ordenada.
+Exemplo:
+mesclaOrdenada [1,3,5] [2,4,6] = [1,2,3,4,5,6]
+
+15. Escreva uma função polimórfica chamada aplicaEmVizinhos que receba como parâmetro uma
+função binária e uma lista de um tipo qualquer. A função deve aplicar a função a cada par de
+elementos vizinhos da lista.
+Exemplo:
+aplicaEmVizinhos (+) [1,2,3,4,5] = [3,5,7,9]
+
+16. Escreva uma função polimórfica chamada selecionaPorIndices que receba como parâmetro uma
+lista de índices e uma lista de elementos de um tipo qualquer. A função deve retornar os
+elementos que estão nas posições indicadas.
+Exemplo:
+selecionaPorIndices [0,2,4] "abcdef" = "ace"
+
+17. Escreva uma função polimórfica chamada divideEmGrupos que receba como parâmetro um
+número inteiro n e uma lista de um tipo qualquer. A função deve dividir a lista em sublistas de
+tamanho n, sendo que o último grupo pode conter menos elementos.
+Exemplo:
+divideEmGrupos 3 [1,2,3,4,5,6,7,8,9,10] = [[1,2,3],[4,5,6],[7,8,9],[10]]
+
+18. Escreva uma função polimórfica chamada combinaCondicional que receba como parâmetro uma
+função de retorno booleano, uma função de transformação e duas listas de tipos quaisquer. Para
+cada posição em que o elemento da primeira lista satisfizer a condição, o elemento
+correspondente da segunda lista deve ser substituído pelo resultado da transformação; nas
+demais posições o elemento da segunda lista deve ser mantido.
+Exemplo:
+combinaCondicional even (*100) [1,2,3,4] [10,20,30,40] = [10,200,30,400]
+
+19. Escreva uma função polimórfica chamada primeiroQueSatisfaz que receba como parâmetro uma
+função de retorno booleano e uma lista de um tipo qualquer. A função deve retornar, encapsulado
+em Just, o primeiro elemento que satisfaz a condição, ou Nothing caso nenhum elemento
+satisfaça.
+Exemplo:
+primeiroQueSatisfaz even [1,3,5,6,7] = Just 6
+primeiroQueSatisfaz even [1,3,5] = Nothing
+
+20. Escreva uma função polimórfica chamada removeSeAmbosSatisfazem que receba como
+parâmetro duas funções de retorno booleano e duas listas de mesmo tamanho, de tipos
+quaisquer. A função deve remover, de ambas as listas, os elementos na mesma posição sempre
+que o elemento da primeira lista satisfizer a primeira condição e o elemento da segunda lista,
+na mesma posição, satisfizer a segunda condição.
+Exemplo:
+removeSeAmbosSatisfazem even odd [1,2,3,4] [5,7,8,9] = ([1,3],[5,8])
+
+21. Escreva uma função polimórfica chamada contaMaximosLocais que receba como parâmetro uma
+lista de um tipo qualquer ordenável. A função deve contar quantos elementos são maiores que
+os seus dois vizinhos imediatos (elementos nas extremidades não são considerados).
+Exemplo:
+contaMaximosLocais [1,5,2,8,3,3,9,1] = 3
+
+22. Escreva uma função polimórfica chamada intercalaListas que receba como parâmetro duas
+listas de um tipo qualquer. A função deve alternar elementos entre as duas listas; caso uma das
+listas termine antes da outra, os elementos restantes da lista mais longa devem ser anexados
+ao final.
+Exemplo:
+intercalaListas [1,2,3] [10,20,30,40,50] = [1,10,2,20,3,30,40,50]
+
+23. Escreva uma função polimórfica chamada aplicaSeTodosSatisfazem que receba como
+parâmetro uma função de retorno booleano, uma função de transformação e uma lista de um
+tipo qualquer. A transformação deve ser aplicada a todos os elementos somente se todos eles
+satisfizerem a condição; caso contrário, a lista original deve ser retornada sem alterações.
+Exemplo:
+aplicaSeTodosSatisfazem even (*2) [2,4,6] = [4,8,12]
+aplicaSeTodosSatisfazem even (*2) [2,3,6] = [2,3,6]
+
+24. Escreva uma função polimórfica chamada contaPalavrasComPredicado que receba como
+parâmetro uma função de retorno booleano e uma frase (String). A função deve contar quantas
+palavras da frase, separadas por espaço, satisfazem a condição.
+Exemplo:
+contaPalavrasComPredicado (\p -> length p > 3) "eu gosto de programar em haskell" = 3
+
+25. Escreva uma função polimórfica chamada substituiSeIgual que receba como parâmetro dois
+valores de um tipo qualquer e uma lista do mesmo tipo. A função deve substituir todas as
+ocorrências do primeiro valor pelo segundo valor na lista.
+Exemplo:
+substituiSeIgual 0 9 [1,0,2,0,3] = [1,9,2,9,3]
+
+26. Escreva uma função polimórfica chamada duplicaSeSatisfaz que receba como parâmetro uma
+função de retorno booleano e uma lista de um tipo qualquer. A função deve duplicar cada
+elemento que satisfizer a condição, mantendo os demais elementos únicos.
+Exemplo:
+duplicaSeSatisfaz even [1,2,3,4,5] = [1,2,2,3,4,4,5]
+
+27. Escreva uma função polimórfica chamada zipComFuncoes que receba como parâmetro uma lista
+de funções e uma lista de valores de tipos quaisquer. A função deve aplicar cada função da
+primeira lista ao elemento correspondente da segunda lista, parando quando a menor das duas
+listas terminar.
+Exemplo:
+zipComFuncoes [(+1), (*2), negate] [10,20,30,40] = [11,40,-30]
+
+28. Escreva uma função polimórfica chamada filtraDecrescente que receba como parâmetro uma
+lista de um tipo qualquer ordenável. A função deve retornar a maior sublista contígua
+estritamente decrescente encontrada na lista.
+Exemplo:
+filtraDecrescente [1,5,4,3,2,6,9,7,8] = [5,4,3,2]
+
+29. Escreva uma função polimórfica chamada aplicaNTimes que receba como parâmetro um número
+inteiro n, uma função e um valor inicial de um tipo qualquer. A função deve aplicar a função ao
+valor n vezes, sucessivamente.
+Exemplo:
+aplicaNTimes 3 (*2) 5 = 40
+
+30. Escreva uma função polimórfica chamada combinaComEscolha que receba como parâmetro uma
+função classificadora (que retorna um Either), duas funções de transformação e uma lista de um
+tipo qualquer. Para cada elemento, a função classificadora deve decidir, através do Either, qual
+das duas transformações deve ser aplicada, retornando a lista com os resultados.
+Exemplo:
+combinaComEscolha (\x -> if even x then Left x else Right x) (*10) (+100) [1,2,3,4]
+= [101,20,103,40]
